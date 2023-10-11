@@ -1,0 +1,62 @@
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+.custom_marker_red {
+  background-image: url(../img/map-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3.5rem !important;
+  height: 4rem !important;
+}
+
+.custom_marker_blue {
+  background-image: url(../img/map-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3.5rem !important;
+  height: 4rem !important;
+}
+
+.leaflet-marker-icon { border-radius: 50%; text-align: center;}
+.leaflet-marker-icon div { line-height:40px;}
+.leaflet-marker-icon div span { font-size: 1.6rem;}
+
+.leaflet-popup { bottom: 4rem !important; }
+.leaflet-popup-content { font-size: 1.4rem;}
+.leaflet-popup-close-button span {font-size: 1.4rem;}
+
+
+.marker-cluster { width: 5rem !important; height: 5rem !important; border-radius: 50% !important; }
+.marker-cluster > div { width: 4rem; height: 4rem; border-radius: 50%; position: absolute; margin-left: unset !important; margin-top: unset !important; top:50%; left: 50%; transform: translate(-50%,-50%);}
+
+.sm { background-color: unset !important; /* width: 7rem !important; height: 7rem !important; */}
+.sm > div { background: url(../img/green.png) no-repeat center / cover; background-color: unset !important; width: 4rem !important; height: 4rem !important;}
+.sm > div span { line-height:4rem;}
+.md { background-color: unset !important; /* width: 7rem !important; height: 7rem !important; */}
+.md > div { background: url(../img/red.png) no-repeat center / cover; background-color: unset !important; width: 4rem !important; height: 4rem !important;}
+.md > div span { line-height:4rem;}
+.lg { background-color: unset !important; /* width: 7rem !important; height: 7rem !important; */}
+.lg > div { background: url(../img/red.png) no-repeat center / cover; background-color: unset !important; width: 4rem !important; height: 4rem !important;}
+.lg > div span { line-height:4rem;}
+
+
+.marker_info { position: fixed; right: 1.5rem; top: 1.5rem; padding: 0.3rem 1rem; z-index: 9999; background: #ffffffcf; border-radius: 10px;}
+.marker_info p { display: flex; align-items: center; font-size: 1.5rem; margin: 0.6rem 0; }
+.marker_info p img { width: 2.5rem; margin-right: .7rem;}
+
+
+#info_box { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; border-radius: .7rem .7rem 0 0 ; background: #fff; }
+#info_box.lh,
+#info_box.newhome {  padding: 1.5rem;border: 1px solid #8cc01f; box-shadow: rgb(149 157 165 / 30%) 0px -8px 8px;}
+#info_box.lh .name_link { background: #f3f9de; border: 1px solid #c9e681; border-radius: .7rem;}
+#info_box.newhome .name_link { background: #e5f9f1; border: 1px solid #1d9874; border-radius: .7rem;}
+#info_box .name_link { display: block; width: 100%; padding: 1.5rem 0; font-size: 1.6rem; font-weight: 600; color: #539165; text-align: center; position: relative;}
+#info_box .name_link:after { content:''; background: url(../img/map-arrow.png) no-repeat center / contain; width: 1rem; height: 2rem; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
+#info_box .detail_wrap { background: #fff; padding: 1.5rem 0; display: flex; flex-direction: column; gap: 1.5rem;}
+#info_box .detail_wrap .cls { width: 100%; font-size: 1.6rem; text-align: center; font-weight: 500;}
+#info_box .detail_wrap .cls:before { content: "유형 : "; font-size: inherit;font-weight: unset;}
+#info_box .detail_wrap .state { width: 100%; font-size: 1.6rem; text-align: center; color: #ff2424;}
+#info_box .detail_wrap .state:before { content: "공고상태 : "; font-size: inherit; color: #333;}
+#info_box .detail_wrap .period { font-size: 1.6rem; width: 100%; text-align: center; }
+#info_box .detail_wrap .period:before { content: '공고기간 : '; margin-right: 1rem;}
