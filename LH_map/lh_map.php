@@ -3,6 +3,11 @@
 include './db2.php';
 
 $sql = query("SELECT * FROM lh_gonggo WHERE PAN_SS != '접수마감' AND LGDN_ADR1 != ''");
+
+// 지역 선택 기능 추가
+// $region = $_GET['region'];
+// $sql = query("SELECT * FROM lh_gonggo WHERE PAN_SS != '접수마감' AND LGDN_ADR1 != '' AND CNP_CD_NM LIKE '%{$region}%'");
+
 $dataArr = array();
 
 foreach ($sql as $val) {
@@ -158,6 +163,27 @@ $jsonData2 = json_encode($dataArr2, JSON_UNESCAPED_UNICODE);
 </head>
 <body>
 	<div id="wrap">
+ 		<!--지역선택 탭 -->
+<!-- 		<div class="area_wrap">
+			<a href="?region=전국">전국</a>
+			<a href="?region=서울">서울</a>
+			<a href="?region=경기">경기</a>
+			<a href="?region=인천">인천</a>
+			<a href="?region=부산">부산</a>
+			<a href="?region=대구">대구</a>
+			<a href="?region=대전">대전</a>
+			<a href="?region=세종">세종</a>
+			<a href="?region=강원">강원</a>
+			<a href="?region=울산">울산</a>
+			<a href="?region=경북">경북</a>
+			<a href="?region=경남">경남</a>
+			<a href="?region=광주">광주</a>
+			<a href="?region=전북">전북</a>
+			<a href="?region=전남">전남</a>
+			<a href="?region=충북">충북</a>
+			<a href="?region=충남">충남</a>
+			<a href="?region=제주도">제주도</a>
+		</div>		 -->
 		<div id="map"></div>
 		<div class="marker_info">
 			<p><img src="./img/map-1.png" alt="임대"> 임대</p>
