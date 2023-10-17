@@ -187,10 +187,12 @@ var markers1 = L.markerClusterGroup({
 
 
 addresses1.forEach(arr => {
-    var latArr = arr['x'].split('||');
-    var lonArr = arr['y'].split('||');
+	var latArr = arr['x'].split('||');
+    	var lonArr = arr['y'].split('||');
 	var name = arr['LCC_NT_NM'].split('||');
 	var url = arr['DTL_URL_MOB'];
+	
+	var lh_m_remove =  url.replace('https://m.', 'https://');
 
 	latArr.forEach(function(lat, idx) {
 		var lon = lonArr[idx];
@@ -214,7 +216,7 @@ addresses1.forEach(arr => {
 			// 청약명
 			var nameA = document.createElement('a');
 			nameA.classList.add('name_link');
-			nameA.href = url;
+			nameA.href = lh_m_remove;
 			nameA.textContent = name[idx];
 			infoBox.appendChild(nameA);
 
@@ -255,11 +257,11 @@ var markers2 = L.markerClusterGroup({
 });
 
 addresses2.forEach(arr => {
-	//console.log(`시작날짜 : ${arr.RCEPT_BGNDE} || 종료날짜 : ${arr.RCEPT_ENDDE}`);
-    var latArr = arr['x'].split('||');
-    var lonArr = arr['y'].split('||');
+    	var latArr = arr['x'].split('||');
+    	var lonArr = arr['y'].split('||');
 	var name = arr['HOUSE_NM'].split('||');
 	var url = arr['PBLANC_URL'];
+	var lh_m_remove =  url.replace('https://m.', 'https://');
 
 	latArr.forEach(function(lat, idx) {
 		var lon = lonArr[idx];
@@ -283,7 +285,7 @@ addresses2.forEach(arr => {
 			// 청약명
 			var nameA = document.createElement('a');
 			nameA.classList.add('name_link');
-			nameA.href = url;
+			nameA.href = lh_m_remove;
 			nameA.textContent = name[idx];
 			infoBox.appendChild(nameA);
 
