@@ -1,0 +1,68 @@
+#wrap {}
+#wrap .fixedTop {height: 7rem; position: fixed; left: 0; top:0; width: 100%; border-bottom: 1px solid #ccc; z-index: 100; background: #fff;}
+#wrap .fixedTop h1 a {text-align: center; font-size:2.2rem; font-weight: 800; line-height:7rem; display: block;}
+#wrap .mainContainer {background: #fff; min-height: calc(100vh - 7rem);}
+#wrap .mainContainer .container {background: #eaf1f4; padding: 2rem 2rem 4rem; position: relative;}
+#wrap .mainContainer .container::after {content:''; display: block; position: absolute; bottom:1.5rem; left: 50%; margin-left: -0.6rem; border-top: 1.2rem solid #333; border-left: 1.2rem solid transparent; border-right: 1.2rem solid transparent;}
+#wrap .mainContainer .container form {background: #fff; border-radius:1rem; padding: 3rem 2rem; border: 1px solid #ccc;}
+#wrap .mainContainer .container form > div {margin-bottom: 2rem;}
+#wrap .mainContainer .container form > div h3 {font-size:1.6rem; font-weight: 800; margin-bottom: 1rem;}
+#wrap .mainContainer .container form > div h3 + * {display: flex; justify-content: space-between; background: #f7f7f7; border: 1px solid #ccc; border-radius: 0.5rem;}
+#wrap .mainContainer .container form > div h3 + label {position: relative;}
+#wrap .mainContainer .container form > div h3 + * > * {line-height: 5rem;}
+#wrap .mainContainer .container form > div h3 + * input {background: unset; width: 100%; text-indent: 1rem; color:#666; font-size: 1.4rem;}
+#wrap .mainContainer .container form > div h3 + * input::placeholder {color:#ccc; font-size: 1.4rem;}
+#wrap .mainContainer .container form > div h3 + label span {position: absolute; right:0; top:0; width: 5rem; height: 5rem; text-align: center; font-weight: 800; font-size: 1.6rem;}
+#wrap .mainContainer .container form > div h3 + ul {padding: 0 .7rem ; height: 5rem; display: flex; justify-content: space-between; align-items: center;}
+#wrap .mainContainer .container form > div h3 + ul.btnWrap {height: unset; flex-flow: column;}
+#wrap .mainContainer .container form > div h3 + ul.btnWrap li {width: 100%; display: flex; flex-flow: column; text-align: left; box-sizing: border-box; padding: 1.5rem .7rem; border-bottom: 1px solid #dadada;}
+#wrap .mainContainer .container form > div h3 + ul.btnWrap li:nth-last-child(1) { border-bottom: none;}
+#wrap .mainContainer .container form > div h3 + ul.btnWrap li em {font-size: 1.4rem; font-weight: 700;}
+#wrap .mainContainer .container form > div h3 + ul.btnWrap li span {font-size:1.4rem; margin-top: 1rem; color:#555; line-height: 1.2;}
+#wrap .mainContainer .container form > div h3 + ul li {line-height: unset; width: 32%; text-align: center; color:#aaa;}
+#wrap .mainContainer .container form > div h3 + ul li.selectLabel {background: #fafdff; border: 1px solid #036eb7; color:#f9a326; border-radius: 0.5rem;}
+#wrap .mainContainer .container form .btnBlock {display: flex; justify-content: center; align-items: center; margin-bottom: 0;}
+#wrap .mainContainer .container form .btnBlock button {width: 100%; padding: 1.5rem 0; border: 1px solid #036eb7; color:#fff; background:#036eb7; border-radius: 3rem; margin-top: 1rem; font-size: 1.4rem;}
+#wrap .mainContainer .errorBlock {}
+#wrap .mainContainer .errorBlock .resultBox {display: flex; flex-flow: column;}
+#regisErr {padding: 4rem 2rem;border-bottom: 5px solid #f7f7f7;}
+#regisErr .totalTop {display: flex; flex-flow: row wrap;border: 1px solid #f7f7f7; border-radius:1rem 1rem 0 0; }
+#regisErr .totalTop .totalList {width: 100%; display:flex; padding: 1rem 2rem;border-bottom: 1px solid #f7f7f7; margin-bottom: 0;}
+#regisErr .totalTop .halfList {width: 50%;}
+#regisErr .totalTop .totalList * {line-height: 1.5;font-weight: 700;}
+#regisErr .totalTop .totalList h2 {width: 100px; font-size:1.6rem;}
+#regisErr .totalTop .totalList em {color:#036eb7; font-size:1.6rem;}
+#regisErr .totalTop .totalList span {}
+#regisErr .totalBtm {display: flex; flex-flow:column;border: 1px solid #f7f7f7; border-radius:0 0 1rem 1rem; border-top: 0;}
+#regisErr .totalBtm > div {padding: 2rem; border-bottom: 1px solid #f7f7f7;}
+#regisErr .totalBtm > div:last-child {border-bottom: 0;}
+#regisErr .totalBtm > div * {font-weight: 700;}
+#regisErr .totalBtm > div h2 {font-size:2.5rem; margin-bottom: 1rem;}
+#regisErr .totalBtm > div em {color:#036eb7; font-size:3rem}
+#regisErr .totalBtm > div span {margin-left: 1rem;}
+#result_table {padding: 4rem 2rem;}
+#result_table #result_thead {font-size:2.5rem; font-weight: 700; padding-bottom: 2rem; border-bottom: 1px solid #f0f1f3;}
+#result_table #result_tbody {padding-left: 0; margin: 0;}
+#result_table #result_tbody .result_list {display: flex; flex-flow: column; border-bottom: 1px solid #f0f1f3;}
+#result_table #result_tbody .result_list:last-child {border-bottom: 0;}
+#result_table #result_tbody .result_list > div {margin-bottom: 1.5rem;}
+#result_table #result_tbody .result_list .result_title {font-weight: 700; margin-top: 1.5rem; font-size:1.8rem}
+#result_table #result_tbody .result_list .principalPaid2 {display: flex; justify-content: space-between; align-items: center;}
+#result_table #result_tbody .result_list .principalPaid2 * {font-weight: 700; font-size:1.6rem;}
+#result_table #result_tbody .result_list .principalPaid2 span {font-size:1.4rem}
+#result_table #result_tbody .result_list .principalPaid2:nth-child(2) span,
+#result_table #result_tbody .result_list .principalPaid2:nth-child(3) span{color:#898989}
+#result_table #result_tbody .result_list .principalPaid2:last-child em {color:#036eb7;}
+#result_table #result_tbody .result_list .principalPaid2:last-child span {font-weight: 700;}
+
+.banner_wrap ul {
+  margin: 0;
+  padding: 0;
+}
+.banner_wrap ul li a {
+  font-size: 0;
+  display: block;
+}
+.banner_wrap ul li a img {
+  width: 100%;
+}
